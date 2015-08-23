@@ -1,6 +1,13 @@
 {
   "name": "simple-set",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "index.js",
-  "description": "Manage an array without duplicates. Uses ES6 Set type."
+  "description": "Manage an array without duplicates. Uses ES6 Set type.",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha test.js"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5"
+  }
 }

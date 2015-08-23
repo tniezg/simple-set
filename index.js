@@ -34,4 +34,10 @@ SimpleSet.prototype.keys = function(){
   return fullArray;
 };
 
+SimpleSet.prototype.bulkAdd = function(keys){
+  keys.forEach(function(key){
+    this.add(key);
+  }, this);
+};
+
 module.exports = SimpleSet;
