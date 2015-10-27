@@ -1,37 +1,23 @@
 'use strict';
 
 function SimpleSet(){
-  this._set = new Set();
+  this._set = {};
 }
 
 SimpleSet.prototype.add = function(key){
-  this._set.add(key);
+  this._set[key] = true;
 };
 
 SimpleSet.prototype.remove = function(key){
-  this._set.delete(key);
+  delete this._set[key];
 };
 
 SimpleSet.prototype.has = function(key){
-  return this._set.has(key);
+  return key in this._set;
 };
 
 SimpleSet.prototype.keys = function(){
-  var values = this._set.values();
-  var value = values.next();
-  var fullArray = [];
-
-  while(!value.done){
-    fullArray.push(value.value);
-
-    value = values.next();
-  }
-
-  if(typeof value.value !== 'undefined'){
-    fullArray.push(value.value);
-  }
-
-  return fullArray;
+  return Object.keys(this._set);
 };
 
 SimpleSet.prototype.bulkAdd = function(keys){

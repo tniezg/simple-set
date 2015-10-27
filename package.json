@@ -1,6 +1,6 @@
 {
   "name": "simple-set",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "index.js",
   "description": "Manage an array without duplicates. Uses ES6 Set type.",
   "scripts": {
